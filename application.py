@@ -1,10 +1,6 @@
-import numpy as np
-
-def chebyshev_distance(p1, p2):
-    """Calculate Chebyshev distance using NumPy"""
-    p1 = np.array(p1)
-    p2 = np.array(p2)
-    return np.max(np.abs(p1 - p2))
+def chebyshev_distance_map(p1, p2):
+    """Calculate Chebyshev distance using map"""
+    return max(map(lambda x, y: abs(x - y), p1, p2))
 
 if __name__ == "__main__":
     point1 = (1, 2, 3)
